@@ -1,15 +1,8 @@
-package com.hackerrank.test;
+package com.hackerrank;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 public class HackerRank {
 	
@@ -288,8 +281,86 @@ public class HackerRank {
 	    	System.out.println("Freq : "+maxEntry.getKey());
 	    	return result;
 	    }
-	public static void main(String[] args) {
+
+	static int designerPdfViewer(int[] h, String word) {
+
+		int result = 0;
+		Map<Integer, Character> map = new HashMap<>();
+		for(char ch='a';ch<='z';ch++){
+			int i = (int) ch;
+			map.put(i-97,ch);
+		}
+		//System.out.println(map);
+		Map<Character,Integer> map_new = new HashMap<>();
+
+		for(int i = 0; i<h.length;i++){
+
+			map_new.put(map.get(i),h[i]);
+
+		}
+		//System.out.println(map_new);
+		int max = Integer.MIN_VALUE;
+		char[] charArr = word.toCharArray();
+		for(int j =0;j<charArr.length;j++){
+			if(map_new.get(charArr[j])>max){
+				max = map_new.get(charArr[j]);
+			}
+		}
+		result = max*(word.length());
+		System.out.println(map_new);
+		return result;
+	}
+
+	static List<Integer> beHappy(double sightRadius, List<List<Integer>> eventsGrid){
+
+		//eq 0,0
+		List<Integer> result = new ArrayList<>();
+		int x,y = 0;
+		for(List<Integer> list: eventsGrid){
+				Integer x1 = list.get(0);
+				Integer x2 = list.get(1);
+				Integer w =  list.get(2);
+				double h = w/sightRadius;
+				//x + y + 1 =
 		
+		}
+
+		return result;
+
+	}
+	static int[] breakingRecords(int[] scores) {
+
+		int h = 0;
+		int l = 0;
+		int max = scores[0];
+		int min = scores[0];
+		for(int i=1;i<scores.length;i++){
+			if(scores[i]>scores[i-1] && scores[i]>max){
+				max = scores[i];
+				h++;
+			}
+			else if(scores[i]<scores[i-1] && scores[i]<min){
+				min = scores[i];
+				l++;
+			}
+		}
+		System.out.println(h+" "+l);
+		return new int[]{h,l};
+	}
+
+
+	public static void main(String[] args) {
+		//compute("baa");
+		List<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(1);
+		list.add(3);
+		list.add(2);
+		int ar[] = {3 ,4 ,21, 36, 10, 28, 35, 5 ,24, 42};
+		//breakingRecords(ar);
+		String word = "zaba";
+		//designerPdfViewer(ar,word);
 		//System.out.println(sockMerchant(10,arr));
 
 		 int arr[][] = 
@@ -299,23 +370,36 @@ public class HackerRank {
 		            {10, 8, -12} 
 		        }; 
 		//diagonalDifference(arr);
-		 int ar[] = {1 ,3 ,2 ,6 ,1 ,2};
+
 		 //plusMinus(ar);
 		 //staircase(4);
 		 int[] array = {
 				 1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4};
-		 //miniMaxSum(array);
-		 //timeConversion("06:40:03AM");
-		 
-		 //divisibleSumPairs(6,3,ar);
-		 List<Integer> list = new ArrayList<>();
-		 list.add(1);
-		 list.add(4);
-		 list.add(4);
-		 list.add(4);
-		 list.add(5);
-		 list.add(3);
-		 migratoryBirds(list);
+		 /*
+		 miniMaxSum(array);
+		 timeConversion("06:40:03AM");
+		 divisibleSumPairs(6,3,ar);
+		 */
+
+
+
+		 //migratoryBirds(list);
+		//birthday(list,3,2);
+
+			Scanner in = new Scanner(System.in);
+			int n = in.nextInt();
+			for(int i = 0; i < n; i++){
+				String name = in.next();
+				int phone = in.nextInt();
+				// Write code here
+
+			}
+			while(in.hasNext()){
+				String s = in.next();
+				// Write code here
+			}
+			in.close();
+
 	}
 	
 	

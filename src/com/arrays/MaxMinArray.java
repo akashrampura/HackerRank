@@ -1,4 +1,4 @@
-package com.practice;
+package com.arrays;
 
 public class MaxMinArray {
 	
@@ -25,7 +25,7 @@ public class MaxMinArray {
 		
 	}
 	
-	public static void main(StringTest[] args) {
+	public static void main(String[] args) {
 		int[] arr = {1,2,3,4,5,66,7,8,9,3,4,0};
 		maxMin(arr);
 		

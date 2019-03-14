@@ -1,4 +1,4 @@
-package com.practice;
+package com.arrays;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,7 +45,7 @@ public class PairSumFindDuplicate {
 	}
 	
 
-	public static void main(StringTest[] args) {
+	public static void main(String[] args) {
 		int[] arr = { 3, 4,3, 5, 2, 8, -1, 1, 4, 2, 5, 6, 3, 0, 7 };
 
 		// pairSum(arr, 7);

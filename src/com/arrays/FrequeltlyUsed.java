@@ -1,7 +1,7 @@
-package com.practice;
+package com.arrays;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class FrequeltlyUsed {
     static void frequentlyUsedNumber(int[] nums){
@@ -26,6 +26,7 @@ public class FrequeltlyUsed {
     public static void main(String[] args){
         int[] arr = {1,2,2,3,4,6,6,7,7,0};
         frequentlyUsedNumber(arr);
+
 
 
     }

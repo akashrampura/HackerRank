@@ -1,19 +1,14 @@
-package com.practice;
+package com.strings;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Set;
+import java.util.*;
 
 public class StringTest {
 
 	public static void stringRotation(String str1, String str2) {
 		if (str1.length() == str2.length() && (str1 + str1).indexOf(str2) != -1) {
-			System.out.println("Strings are rotation of each other");
+			System.out.println("strings are rotation of each other");
 		} else {
-			System.out.println("Strings are NOT rotation of each other");
+			System.out.println("strings are NOT rotation of each other");
 		}
 
 	}
@@ -135,8 +130,11 @@ public class StringTest {
 		int temp = num;
 		while(num!=0) {
 			r = num % 10;
+			System.out.println(r);
 			s = s + (r * r * r);
 			num = num/10;
+			System.out.println("Num");
+			System.out.println(num);
 			
 		}
 		if(temp==s) {
@@ -259,42 +257,76 @@ public class StringTest {
 		}
 
 	}
-	
+
+	public static void stringToBinary(int i){
+
+		String s = "";
+		while(i>0){
+			s = ((i%2) == 0 ? "0" : "1")+s;
+			i = i/2;
+		}
+		System.out.println(s);
+
+	}
+
+	public static void longestCommonSubString(){
+		String s1 = "GeeksforGeeks";
+		String s2 = "reeksorgeeks";
+		int l=0,r=s2.length();
+		String res="";
+		while(l<r){
+			String sub = s2.substring(l,r);
+			System.out.println(sub);
+			if(s1.contains(sub)){
+				res = sub;
+				break;
+			}
+			r--;
+		}
+		System.out.println(res);
+	}
+	public static String reverseS ( String s ) {
+		int length = s.length(), last = length - 1;
+		char[] chars = s.toCharArray();
+		System.out.println(length/2);
+		for ( int i = 0; i < length/2; i++ ) {
+			char c = chars[i];
+			chars[i] = chars[last - i];
+			chars[last - i] = c;
+		}
+		System.out.println(new String(chars));
+		return new String(chars);
+	}
+
 	public static void main(String[] args) {
-		string("vijay");
-		String str = "Ab,c,de!$";
-		String str2 = "vijayy";
-		// System.out.println(reverseString(str2));
-		//reverseWithoutSpecial(str);
-		int f = fibo(10);
-		int[] intArr = { 1, 3, 2, 4, 15, 6 };
-		// reverseIntArray(intArr);
-		String sentence = "we are the";
-		// reverse(str);
-		 firstLetter(sentence);
-		// stringRotation("ABCD","CDAB");
-		//duplicate(str2);
-		//amstrong(120);
-		//sumOfDigits(555);
-		//secondLargest(intArr);
-		//getLastN(123,2);
-		//repeatedAndNonrepeatedChar("vijayv");
-		String s1="vijay",s2="nagaraj";
-		 s1 = s1 + s2;
-         
-	        s2 = s1.substring(0, s1.length()-s2.length());
-	         
-	        s1 = s1.substring(s2.length());
-	         
-	        //Swapping ends
-	         
-	        System.out.println("After Swapping :");
-	         
-	        System.out.println("s1 : "+s1);
-	         
-	        System.out.println("s2 : "+s2);
-	        deleteRecurringChar("aabbcc");
-		
+		//stringToBinary(8);
+		//amstrong(123);
+		//reverseS("vijaya");
+		//longestCommonSubString();
+		int[] input = {3, 30, 34, 5, 98};
+		List<String> l1 = new ArrayList<>();
+		int k=0;
+		for (int i: input) {
+			l1.add(Integer.toString(i));
+		}
+		Collections.sort(l1,new Comparator<String>()
+		{
+			public int compare(String s1,String s2)
+			{
+				if(Integer.parseInt(s1+s2)>Integer.parseInt(s2+s1))
+					return -1;
+				else
+					return 1;
+			}
+		});
+		String result ="";
+		for(int j=0;j<l1.size();j++)
+		{
+			result +=l1.get(j);
+		}
+		System.out.println(result);
+
+
 	}
 
 }

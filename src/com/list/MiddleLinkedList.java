@@ -1,6 +1,6 @@
-package com.practice;
+package com.list;
 
-public class SinglyLinkedList {
+public class MiddleLinkedList {
 	
 	Node head;
 	
@@ -41,13 +41,13 @@ public class SinglyLinkedList {
 		}
 		
 	}
-	public static void main(StringTest[] args) {
-		SinglyLinkedList linkedList = new SinglyLinkedList();
+	public static void main(String[] args) {
+		MiddleLinkedList linkedList = new MiddleLinkedList();
 		linkedList.push(1);
 		linkedList.push(2);
 		linkedList.push(3);
 		linkedList.printMiddle();
-		
+		System.out.println(9/2);
 	}
 
 }

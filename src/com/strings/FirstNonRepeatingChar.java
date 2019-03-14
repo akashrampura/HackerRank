@@ -1,6 +1,4 @@
-package com.practice;
-
-import java.util.Arrays;
+package com.strings;
 
 public class FirstNonRepeatingChar {
 	
@@ -9,9 +7,11 @@ public class FirstNonRepeatingChar {
 	
 	public static int firstNonRepeating(String str) {
 		for (int i = 0; i < str.length();  i++) {
-        	count[str.charAt(i)]++; 
+        	count[str.charAt(i)]++;
+
         }
-		 int index = -1; 
+
+		 int index = -1;
 	       
 	        for (int i = 0; i < str.length();  i++) 
 	        { 
@@ -20,12 +20,14 @@ public class FirstNonRepeatingChar {
 	                index = i; 
 	                break; 
 	            }    
-	        }   
+	        }
+
 	      return index;
 	}
 
 	public static void main(String[] args) {
 		 String str = "geeksforgeeks";
+		firstNonRepeating(str);
 
 	    }
 

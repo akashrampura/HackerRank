@@ -1,10 +1,4 @@
-package com.practice;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
+package com.strings;
 
 public class StringPermutation {
 	
@@ -19,15 +13,15 @@ public class StringPermutation {
 	    	System.out.println(prefix);
 		}
 	    else {
-	        for (int i = 0; i < n; i++)
+	        for (int i = 0; i < n; i++){
 	            permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1, n));
-	    }
+	    }}
 	}
 
 
 	public static void main(String[] args) {
 
-		//permutation("JSP");
+		permutation("JSP");
 	}
 
 
