@@ -43,7 +43,7 @@ public class Twitter {
         }
             int max = 0; String key = "";
             System.out.println(key);
-          //list<Map.Entry<String,Integer>> s = map.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toList());
+          //linkedlist<Map.Entry<String,Integer>> s = map.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toList());
           //Collections.reverse(s);
 
             for(Map.Entry<String,Integer> entry:map.entrySet()){
@@ -61,7 +61,7 @@ public class Twitter {
         List<Integer> output = new ArrayList<Integer>();
         List<List<Integer>> list1 = new ArrayList<>();
         List<List<Integer>> list2 = new ArrayList<>();
-        //list<Integer> v=new ArrayList<>();
+        //linkedlist<Integer> v=new ArrayList<>();
         HashMap<Integer,Integer> v=new HashMap<>();
         for (int i = 0; i <= values.size(); i++) {
             list1.add(new ArrayList<>());
@@ -132,36 +132,49 @@ public class Twitter {
     }
 
     public static void main(String[] args) {
-       // String s = "I am using HackerRank to improve programming";
-        //String t = "HackerRank am to improve";
-       // missingWords(s,t);
-        String[] sArr = {"b","b","a","a"};
-        //election(sArr);
-        String s = "I am using hackerRank to improve programming I am";
-        String t = "am I";
-        int k =0;
-        String[] sent=s.split(" ");
-        String[] subsent=t.split(" ");;
-        List<String> missing=new LinkedList<>();
-        for(int i=0;i<sent.length;i++){
-            missing.add(sent[i]);
-        }
-        for(int i=0;i<subsent.length;i++){
+        String string = "hackerrank";//-1,7,5,-1
+        String string2 = "aaaa";// 1012 // sam - [1] -1
+        List<Integer> indexList = new ArrayList<>();
+        indexList.add(4);
+        indexList.add(1);
+        indexList.add(6);
+        indexList.add(8);
+        int[] arr2 = {0,1,2,3};
+        List<Integer> result = new ArrayList<>();
+        for(int i=0;i<indexList.size();i++){
+            int l = 0, r = string.length();
+            StringBuilder sb = new StringBuilder();
+            sb.append(string.substring(0,indexList.get(i)));
+            sb.reverse();
+            String s1 = sb.toString();
+            String s2 = string.substring(indexList.get(i)+1);
+            System.out.println(s1);
+            System.out.println(s2);
 
-            for(int j=k;j<missing.size();j++)
-            {
-                if(missing.get(j).equals(subsent[i]))
-                {
-                    missing.remove(j);
-                    k=j;
-                    break;
+            String s = Character.toString(string.charAt(indexList.get(i)));
+            if(!s1.contains(s) && !s2.contains(s)){
+                result.add(-1);
+            }
+            else {
+                int val = 0;
+
+                for (int j=0;j<(s1+s2).length();j++) {
+
+                    if (j<s1.length() && s1.charAt(j) == string.charAt(indexList.get(i))) {
+                        val = s1.length() - j - 1;
+                        result.add(val);
+                        break;
+                    }
+                    if (j<s2.length() && s2.charAt(j) == string.charAt(indexList.get(i))) {
+                        val = val = s1.length() + j + 1;
+                        result.add(val);
+                        break;
+                    }
+                 }
                 }
 
             }
-        }
-        for(int i = 0; i<missing.size(); i++) {
-            System.out.println(missing.get(i));
-        }
+        System.out.println(result);
     }
 
 

@@ -12,7 +12,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import javax.swing.text.html.ListView;
-
+import static java.util.Collections.reverseOrder;
 public class SortMap {
 	
 	public static void sortMap(Map<String, Integer> input) {
@@ -24,7 +24,7 @@ public class SortMap {
 		System.out.println(list);
 		//System.out.println(input.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toList()));
 
-		List<Map.Entry<String,Integer>> l = input.entrySet().stream().sorted(Map.Entry.comparingByValue()).
+		List<Map.Entry<String,Integer>> l = input.entrySet().stream().sorted(reverseOrder(Map.Entry.comparingByValue())).
 				collect(Collectors.toList());
 
 	}

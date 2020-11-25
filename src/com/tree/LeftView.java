@@ -20,6 +20,7 @@ package com.tree;
                 return;
             }
             if(level>max_level){
+                System.out.println(node.data);
                 max_level = level;
             }
             leftViewUtil(node.left,level+1);

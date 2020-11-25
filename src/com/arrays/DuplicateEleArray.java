@@ -30,6 +30,7 @@ public class DuplicateEleArray {
 		
 		int[] arr = {1,1,2,3,4,5,66,66,7,7,9};
 		System.out.println(Arrays.toString(duplicate(arr)));
+		// linkedlist.stream().mapToInt(i->i).toAraary();
 
 		
 

@@ -7,11 +7,11 @@ public class Permutation {
 	public static ArrayList<ArrayList<Integer>> permute(int[] num) {
 		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
 	 
-		//start from an empty list
+		//start from an empty linkedlist
 		result.add(new ArrayList<Integer>());
 		System.out.println(result);
 		for (int i = 0; i < num.length; i++) {
-			//list of list in current iteration of the array num
+			//linkedlist of linkedlist in current iteration of the array num
 			ArrayList<ArrayList<Integer>> current = new ArrayList<ArrayList<Integer>>();
 	 
 			for (ArrayList<Integer> l : result) {

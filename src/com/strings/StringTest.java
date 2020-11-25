@@ -70,8 +70,6 @@ public class StringTest {
 		}
 		String rev = new String(charArray);
 		System.out.println(rev);
-
-
 	}
 
 	public static int fibo(int num) {
@@ -86,9 +84,7 @@ public class StringTest {
 		if (null == str || str.length() <= 1) {
 			return str;
 		}
-
 		return reverseString(str.substring(1)) + str.charAt(0);
-
 	}
 
 	public static void duplicate(String str) {
@@ -300,7 +296,7 @@ public class StringTest {
 
 	public static void main(String[] args) {
 		//stringToBinary(8);
-		//amstrong(123);
+		amstrong(123);
 		//reverseS("vijaya");
 		//longestCommonSubString();
 		int[] input = {3, 30, 34, 5, 98};
@@ -325,8 +321,6 @@ public class StringTest {
 			result +=l1.get(j);
 		}
 		System.out.println(result);
-
-
 	}
 
 }

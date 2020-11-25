@@ -20,8 +20,7 @@ public class Cyclic {
     // This function is a variation of DFSUytil() in
     // https://www.geeksforgeeks.org/archives/18212
     private boolean isCyclicUtil(int i, boolean[] visited,
-                                 boolean[] recStack)
-    {
+                                 boolean[] recStack) {
 
         // Mark the current node as visited and
         // part of recursion stack

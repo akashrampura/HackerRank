@@ -16,14 +16,14 @@ public class SubArraySum {
         {
 
             // If curr_sum exceeds the sum, then remove the starting elements
-            while (curr_sum > sum )
+            while (curr_sum > sum && start<i-1)
             {
                 curr_sum = curr_sum - arr[start];
                 start++;
             }
 
             // If curr_sum becomes equal to sum, then return true
-            if (curr_sum == sum && start<i-1)
+            if (curr_sum == sum )
             {
                 int p = i-1;
                 System.out.println("Sum found between indexes " + start

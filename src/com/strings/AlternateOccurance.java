@@ -22,20 +22,7 @@ public class AlternateOccurance {
     {
         String str1 = "geeksforgeeks";
         String str2 = "It is a long day Dear";
-        //printStringAlternate(str1);
-       // printStringAlternate(str2);
-        Map<Character,Integer> map = new LinkedHashMap<>();
-        for(Character c: str1.toCharArray()){
-                map.put(c,map.getOrDefault(c,0)+1);
 
-        }
-        for(Character c: map.keySet()){
-            if(map.get(c)==1){
-                System.out.println(c);
-                break;
-            }
-        }
-       // System.out.println(map);
 
     }
 }

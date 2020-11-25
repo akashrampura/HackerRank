@@ -8,7 +8,7 @@ public class VerticalSumBinaryTree
     // verticalSumDLLUtil().
     static void verticalSumDLL(TNode root)
     {
-        // Create a doubly linked list node to
+        // Create a doubly linked linkedlist node to
         // store sum of lines going through root.
         // Vertical sum is initialized as 0.
         LLNode llnode = new LLNode(0);
@@ -31,7 +31,7 @@ public class VerticalSumBinaryTree
         }
     }
 
-    // Constructs linked list
+    // Constructs linked linkedlist
     static void verticalSumDLLUtil(TNode tnode,
                                    LLNode llnode)
     {
@@ -77,7 +77,7 @@ public class VerticalSumBinaryTree
         verticalSumDLL(root);
     }
 
-    // Doubly Linked list Node
+    // Doubly Linked linkedlist Node
     static class LLNode
     {
         int data;

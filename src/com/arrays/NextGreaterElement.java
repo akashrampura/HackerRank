@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class NextGreaterElement {
 
-    static int arr[] = {11, 13, 21, 3};
+    static int arr[] = {11, 13, 3, 21};
 
     /* prints element and NGE pair for all
     elements of arr[] of size n */

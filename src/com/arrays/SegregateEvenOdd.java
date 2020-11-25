@@ -48,7 +48,6 @@ public class SegregateEvenOdd {
 
     public static void main(String[] args) {
 
-        //segEvenOdd(new int[]{22,7,45,8,9,44,77});
-        System.out.println(~2);
+        segEvenOdd(new int[]{22,7,45,8,9,44,77});
     }
 }

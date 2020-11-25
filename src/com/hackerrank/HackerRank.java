@@ -383,8 +383,8 @@ public class HackerRank {
 
 
 
-		 //migratoryBirds(list);
-		//birthday(list,3,2);
+		 //migratoryBirds(linkedlist);
+		//birthday(linkedlist,3,2);
 
 			Scanner in = new Scanner(System.in);
 			int n = in.nextInt();

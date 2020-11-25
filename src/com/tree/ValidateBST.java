@@ -1,23 +1,24 @@
 package com.tree;
 
-class NodeBST
-{
-    int data;
-    NodeBST left, right;
 
-    public NodeBST(int item)
-    {
-        data = item;
-        left = right = null;
-    }
-}
 public class ValidateBST {
 
         NodeBST root;
 
+    static class NodeBST
+    {
+        int data;
+        NodeBST left, right;
+
+        public NodeBST(int item)
+        {
+            data = item;
+            left = right = null;
+        }
+    }
+
         boolean isBST()  {
-            return isBSTUtil(root, Integer.MIN_VALUE,
-                    Integer.MAX_VALUE);
+            return isBSTUtil(root, Integer.MIN_VALUE,Integer.MAX_VALUE);
         }
 
         /* Returns true if the given tree is a BST and its
@@ -36,8 +37,8 @@ public class ValidateBST {
         tightening the min/max constraints */
             // Allow only distinct values
             System.out.println(node.data);
-            return (isBSTUtil(node.left, min, node.data-1) &&
-                    isBSTUtil(node.right, node.data+1, max));
+            return (isBSTUtil(node.left, min, node.data) &&
+                    isBSTUtil(node.right, node.data, max));
         }
 
         /* Driver program to test above functions */

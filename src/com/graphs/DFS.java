@@ -22,7 +22,7 @@ public class DFS {
     //Function to add an edge into the graph
     void addEdge(int v, int w)
     {
-        adj[v].add(w);  // Add w to v's list.
+        adj[v].add(w);  // Add w to v's linkedlist.
     }
 
     // A function used by DFS
